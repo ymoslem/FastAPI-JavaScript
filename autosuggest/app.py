@@ -35,7 +35,7 @@ async def complete(source: Source):
     sentence = source.sentence
     sentence = sentence.strip()
 
-    # # Place here the code that should run with each request
+    # [Modify] Place here the code that should run with each request
     last_word = sentence.split(" ")[-1]
     prefix = " ".join(sentence.split(" ")[:-1])
     scores = [(edit_distance(last_word, word.strip()), word.strip()) for word in vocab]
